@@ -1,0 +1,667 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container-form {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.form-wrapper table th {
+    border: 1px solid black;
+    margin: 50px;
+    padding: 50px;
+    padding: 0px 10px;}
+
+.form-wQrapper table td {
+    border: 1px solid black;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.form-wrapper table td {
+    border: 1px solid black;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    border-spacing: 0px;
+    /* background-color: cornsilk; */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.header-title {
+    background-color: beige;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-input-wrapper .transaksi-input ul{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    flex-direction: row;
+    width: 400px;
+    align-content: space-around;
+    justify-content: space-between;
+}
+
+.form-input-wrapper .transaksi-input ul li {
+    display: flex;
+}
+
+label #tanggal {
+    width: 163.2px;
+}
+
+/* Costumer */
+
+.form-input-wrapper .costumer-input ul{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    flex-direction: row;
+    width: 400px;
+    align-content: space-around;
+    justify-content: space-between;
+}
+
+.form-input-wrapper .costumer-input ul li {
+    display: flex;
+}
+
+.form-input-wrapper {
+    background-color: cadetblue;
+    color: black;
+    padding: 50px;
+    display: flex;
+    gap: 20px;
+    width: 0px;
+    border-radius: 5px;
+    align-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+h2 {background-color: darkcyan;width: 200px;padding: 5px;border-radius: 5px;}
+
+.transaksi-input input,.costumer-input input {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn-tambah-transaksi {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-tambah-barang {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-tambah-transaksi .btn-kirim {
+    padding: 5px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.btn-tambah-barang .btn-kirim:hover {
+    background-color: grey;
+}
+.btn-tambah-barang .btn-kirim {
+    padding: 5px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.btn-tambah-transaksi .btn-kirim:hover {
+    background-color: grey;
+}
+
+.cancel-tambah {
+    padding: 10px 15px;
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor:pointer;
+}
+
+.cancel-tambah:hover {
+    background-color: grey;
+}
+
+.tambah-barang-wrapper {
+    display: flex;
+    text-decoration: none;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 50px;
+    /* margin: 0px 20px; */
+    flex-direction: column;
+    height: 400px;
+    width: 300px;
+    text-align: center;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.tambah-barang-wrapper li {
+    list-style: none;
+}
+
+.tambah-barang-wrapper input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px black;
+    width: 250px;
+    height: 30px;
+}
+.tambah-barang-wrapper h2 {
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+.btn-tambah-barang a {
+    text-decoration: none;
+}
+
+.form-wrapper .ubah-btn {
+    background-color: #2b2bb0;
+}
+
+.form-wrapper .ubah-btn a {
+    color: white;
+    text-decoration: none;
+    font-size:20px;
+    padding:5px;
+}
+
+.form-wrapper .hapus-btn {background-color: #2b2bb0;}
+
+td.hapus-btn {
+    background-color: #2b2bb0;
+}
+
+.form-wrapper .hapus-btn a {
+    color: white;
+    text-decoration: none;
+    font-size:20px;
+    padding:5px;
+}
+
+.form-wrapper .tambah-barang {
+    background-color: #2b2bb0;
+    cursor: pointer;
+    color: white;
+}
+
+.form-wrapper .tambah-barang a {
+    text-decoration: none;
+    color: white;
+}
+.btn-tambah-transaksi a {
+    text-decoration: none;
+}
+.tambah-barang-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.tambah-barang-container.active {
+    display: flex;
+    justify-content: center;
+}
+.container-input-wrapper .table-keranjang table tr th {
+    border: 1px solid black;
+    padding: 2px 10px;
+    border-radius: 1px;
+    flex-direction: column-reverse;
+}
+
+.container-input-wrapper  .table-keranjang table tr td {
+    border: 1px solid black;
+    padding: 2px 10px;
+    border-radius: 1px;
+    text-align: center;
+}
+
+.container-input-wrapper  .table-keranjang {
+    display: block;
+    padding: 50px;
+    background-color: oldlace;
+    width: auto;
+    border-radius: 5px;
+}
+.container-input-wrapper  .table-keranjang.active {
+    display:block;
+    padding: 50px;
+    background-color: oldlace;
+    width: auto;
+    border-radius: 5px;
+    z-index:3;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.container-input-wrapper {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: cadetblue;
+    padding: 50px;
+    text-align: center;
+    gap: 5;
+}
+.table-barang table {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+.header-keranjang {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-keranjang li {
+    list-style: none;
+}
+button.prosesPesanan {
+}
+
+.wrapper-tambah-keranjang {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.detail-pesanan-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+
+.button-post {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}.container-input-wrapper li {
+    list-style: none;
+}
+
+.daftar-wrapper th {
+    border: solid 1px black;
+    padding: 5px;
+    background-color: antiquewhite;
+}
+
+
+.daftar-wrapper td {border: 1px solid black;padding: 5px;text-align: center;}
+
+input.cariPelanggan {
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px;
+    border-radius: 5px;
+    position: relative;
+    left: 70%;
+}
+
+.daftar-wrapper {
+    margin-top: 20px;
+}
+
+select#costumerSelect {
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: start;
+}
+
+.form-input-wrapper .transaksi-input input {
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.transaksi-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button.prosesPesanan {
+    padding: 10px 50px;
+    border-radius: 5px;
+    border: none;
+    background-color: orange;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button.prosesPesanan:hover {
+    background-color: grey;
+}
+
+.costumer-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tambang-barang-wrapper h4 {
+    color: white;
+}
+
+h4.Tanggal-input-head {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cancel-tambah:hover {
+    background-color: grey;
+}
+
+button.btn-kirim-barang:hover {
+    background-color: grey;
+}
+
+.costumer-input input {
+    padding: 10px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pemilihan-costumer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+
+.btn-cancel-keranjang {
+    background-color: red;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    /* left: 70%; */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.btn-tambah-barang{
+    background-color: green;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    /* left: 70%; */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.btn-tambah-barang a{
+    text-decoration:none;
+    color:white;
+    font-weight: 600;
+}
+.btn-cancel-keranjang a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-cancel-keranjang:hover {
+    background-color: grey;
+}
+
+button.btn-kirim-barang {border: none;padding: 10px 15px;border-radius: 5px;font-weight: 400;background-color: cadetblue;color: white;cursor: pointer;}
+select#kodeBarang {
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.detail-pesanan-wrapper input {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button.tambahBarang {
+    padding: 10px 15px;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.button-resert {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+.btn-tambah-barang:hover {
+    background-color: grey;
+}
+.btn-cancel-keranjang:hover {
+    background-color: grey;
+}
+.btn-tambah-barang-baru a {
+    text-decoration: none;
+}
+.ongkirOption {
+    padding: 10px 35px;
+    border: none;
+    box-shadow: .5px .5px .5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+select#diskonOption {
+    padding: 10px 35px;
+    border: none;
+    box-shadow: 0.5px 0.5px 0.5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ongkirdiskon-wrap {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+
+.total-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    font-weight: bold;
+}
+.btn-tambah-barang-baru {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+td.icon-hapus i {
+    font-size: 24px;
+    color: red;
+}
+@media screen and ( max-width: 600px ) {
+
+    input.cariPelanggan{
+        padding: 10px;
+        border: 1px solid black;
+        box-shadow: 1px 1px 1px;
+        border-radius: 5px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -0%);
+    }
+    .header-title .judul{
+        background-color: beige;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        font-size:10px;
+    }
+
+    .header-title .sub-judul{
+        font-size:14px;
+        font-weight:400
+    }
+    .daftar-wrapper table{
+        font: small-caption;
+    }
+    .form-input-wrapper{
+        display:flex;
+        align-items: center;
+        padding: 30px;
+    }
+    .form-input-wrapper .transaksi-input ul{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+    .pemilihan-costumer{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .form-input-wrapper .costumer-input ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .container-input-wrapper .table-keranjang{
+        width: 100%;
+    }
+    .btn-cancel-keranjang{
+        width: 150px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .detail-pesanan-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .detail-pesanan-wrapper h2{
+        font-size: 14px;
+        color: white;
+        width: 150px;
+    }
+    .detail-pesanan-wrapper form{
+        display: flex;
+        flex-direction: column;
+    }
+    .table-barang table{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        overflow: scroll;
+    }
+    .ongkirdiskon-wrap{
+        display: flex;
+        flex-direction: column;
+    }
+    .total-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h2{
+        color: white;
+        font-size: 18px;
+    }
+    h3{
+        font-size:15px;
+    }
+    .button-post{
+        display: flex;
+        margin-top: 20px;
+    }
+    .container-form{
+        margin-bottom: 0px;
+    }
+    .daftar-wrapper th,.daftar-wrapper td{
+        display:block;
+        width: 250px;
+        text-align: center;
+        margin-top: 5px;
+    }
+    .daftar-wrapper table tr{
+    }
+    .container-input-wrapper .table-keranjang table tr th{
+        display: block;
+        width: 200px;
+        margin-top:5px;
+        background-color: antiquewhite;
+        font-size: 12px;
+    }
+    .container-input-wrapper .table-keranjang table tr td{
+        display:block;
+        margin-top:5px;
+        font-size: 12px;
+    }
+    .tambah-barang-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    padding: 50px;
+}
+
+
+}
