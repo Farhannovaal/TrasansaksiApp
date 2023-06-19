@@ -25,7 +25,7 @@ include_once("function/helper.php");
                                     <h4 class="Tanggal-input-head"> kode Barang </h4>
                                     <li>
                                         <label for="kodeBarang">   
-                                            <input type="text" name="kodeBarang" id="kodeBarang" readonly>
+                                            <input type="text" name="kodeBarang" id="kodeBarang" placeholder="Tidak perlu (auto)" style="text-align:center" readonly>
                                         </label>
                                     </li>
                                 </ul>

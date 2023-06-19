@@ -125,3 +125,8 @@ function validateForm() {
     }
   }
   
+
+
+  function confirmation(){
+    return confirm("Apakah anda sudah yakin?");
+  }

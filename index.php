@@ -4,6 +4,10 @@ session_start();
  include_once("function/helper.php");
 
 
+if ($_SESSION['username']  == '' ) {
+    header("location:login.php"); 
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -222,7 +226,7 @@ $qtyBarang =0;
    
     <div class="table-keranjang">
     <div class="button-resert">
-    <div  class="btn-cancel-keranjang"><a href="resetKeranjang.php"> Reset Keranjang   </a></div>
+    <div  class="btn-cancel-keranjang"><a href="resetKeranjang.php" onclick="return confirm('Yakin mereset seluruh keranjang?')"> Reset Keranjang   </a></div>
     <div class="btn-tambah-barang"><a href="DataCS&Barang.php"> Tambah Barang Baru </a></div>
 
     </div>
@@ -361,7 +365,7 @@ $qtyBarang =0;
         
         <div class="button-post">
             <form action="proses_pesanan.php" method="post">
-            <button type="submit" name="prosesPesanan" class="prosesPesanan"  > Kirim Pesanan </button>
+            <button type="submit" name="prosesPesanan" class="prosesPesanan" onclick="return confirmation();"> Kirim Pesanan </button>
                 </div>
             </form>
         </div>

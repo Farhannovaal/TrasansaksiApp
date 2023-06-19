@@ -532,6 +532,65 @@ td.icon-hapus i {
     font-size: 24px;
     color: red;
 }
+
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    gap: 20px;
+    /* width: 300px; */
+    /* position: absolute; */
+    /* left: 50%; */
+    /* top: 50%; */
+}
+
+.login-wrapper h2 {
+    color: white;
+}
+
+
+
+.login-wrapper input {
+    border: none;
+    height: 30px;
+    border: 1px solid grey;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 20px;
+}
+
+h2.login-title {
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+    color: white;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 10px);
+}
+
+button.login-btn {
+    padding: 10px 15px;
+    border: none;
+    background-color: cadetblue;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+input#kodeBarang {
+    cursor: no-drop;
+}
 @media screen and ( max-width: 600px ) {
 
     input.cariPelanggan{
@@ -587,9 +646,7 @@ td.icon-hapus i {
     }
     .btn-cancel-keranjang{
         width: 150px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        display: flex;
     }
     .detail-pesanan-wrapper{
         display: flex;
@@ -603,6 +660,7 @@ td.icon-hapus i {
     .detail-pesanan-wrapper form{
         display: flex;
         flex-direction: column;
+        gap: 20px;
     }
     .table-barang table{
         display: flex;
@@ -622,6 +680,7 @@ td.icon-hapus i {
     h2{
         color: white;
         font-size: 18px;
+        font-size: 14px;
     }
     h3{
         font-size:15px;
@@ -662,6 +721,28 @@ td.icon-hapus i {
     background-color: lightblue;
     padding: 50px;
 }
-
+.button-resert{
+    display: flex;
+    gap: 30px;
+    align-items: baseline;
+}
+    .btn-cancel-keranjang a{
+        font-size:12px;
+    }
+     .btn-tambah-barang a{
+        font-size:12px;
+    }
+    h2.login-title{
+        
+font-size: 14px;
+        
+width: 300px;
+    }
 
 }
+
+
+
+
+
+
