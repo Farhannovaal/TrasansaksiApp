@@ -95,3 +95,37 @@ function validateForm() {
     }
   }
   
+
+//   AJAX FORM COSTUMER
+// $(".prosesPesanan1").click(function(){
+//     var namaCostumer = $("#namaCostumer"). val();
+//     var nomorTelephone = $("#telp").val();
+//     var kode =$("#costumerSelect").val();
+//     var tanggal = $("#tanggal").val();
+
+//     $.post("index.php", {namaCostumer:namaCostumer, nomorTelephone:nomorTelephone,kode:kode,tanggal:tanggal}, function(data){
+//         $('.msg').html(data);
+//     });
+// })
+
+$(document).ready(function() {
+    // Submit form using AJAX
+    $("#formCostumer").submit(function(event) {
+        event.preventDefault();
+        
+        var namaCostumer = $("#namaCostumer").val();
+        var nomorTelephone = $("#nomorTelephone").val();
+        var tanggal = $("#tanggal").val();
+        var kode = $("#costumerSelect").val();
+
+        $.post("keranjangUpdate.php", {
+            dataCostumer: true,
+            namaCostumer: namaCostumer,
+            nomorTelephone: nomorTelephone,
+            tanggal: tanggal,
+            kode: kode
+        }, function(response) {
+            $(".msg").html("Data anda " + namaCostumer + " berhasil disimpan. Lanjutkan memilih barang.");
+        });
+    });
+});

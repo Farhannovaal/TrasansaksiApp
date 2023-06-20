@@ -4,48 +4,45 @@
     include_once("function/koneksi.php");
     include_once("function/helper.php");
 
+    var_dump($_POST);
 
 
     if (isset($_POST['dataCostumer'])) {
-    $namaCs = $_POST['namaCostumer'];
-    $nomorTelp = $_POST['nomorTelephone'];
-    $tanggal = $_POST['tanggal'];
-
-    if (!empty($_SESSION['costumer'])) {
-        echo "<script>alert('Data pelanggan sudah tersimpan, lanjutkan isi barang, atau reset keranjang'); window.location.href='index.php';</script>";
-    } else {
-        $costumerId = mt_rand(100, 999);
-        $queryCostumer = "SELECT * FROM m_customer WHERE kode ='$namaCs'";
-        $result2 = mysqli_query($koneksi, $queryCostumer);
-
-        if (mysqli_num_rows($result2) > 0) {
-            $costumer = mysqli_fetch_assoc($result2);
-            $found = false;
-            foreach ($_SESSION['costumer'] as $key => $value) {
-                if ($value['namaCs'] === $namaCs) {
-                    $found = true;
-                    break;
-                }
-            }
-            if (!$found) {
-                $_SESSION['costumer'][] = $costumer;
-            }
+        $namaCs = $_POST['namaCostumer'];
+        $nomorTelp = $_POST['nomorTelephone'];
+        $tanggal = $_POST['tanggal'];
+    
+        if (!empty($_SESSION['costumer'])) {
+            echo "<script>alert('Data pelanggan sudah tersimpan, lanjutkan isi barang, atau reset keranjang'); window.location.href='index.php';</script>";
         } else {
-            // Pelanggan tidak ditemukan di database
-            $dataCostumer = [
-                'costumerId' => $costumerId,
-                'namaCs' => $namaCs,
-                'nomorTelp' => $nomorTelp,
-                'tanggal' => $tanggal
-            ];
-            $_SESSION['costumer'][] = $dataCostumer;
+            $costumerId = uniqid();
+            $queryCostumer = "SELECT * FROM m_customer WHERE kode ='$namaCs'";
+            $result2 = mysqli_query($koneksi, $queryCostumer);
+    
+            if (mysqli_num_rows($result2) > 0) {
+                $costumer = mysqli_fetch_assoc($result2);
+                $found = false;
+                foreach ($_SESSION['costumer'] as $key => $value) {
+                    if ($value['namaCs'] === $namaCs) {
+                        $found = true;
+                        break;
+                    }
+                }
+                if (!$found) {
+                    $_SESSION['costumer'][] = $costumer;
+                }
+            } else {
+                // Pelanggan tidak ditemukan di database
+                $dataCostumer = [
+                    'costumerId' => $costumerId,
+                    'namaCs' => $namaCs,
+                    'nomorTelp' => $nomorTelp,
+                    'tanggal' => $tanggal
+                ];
+                $_SESSION['costumer'][] = $dataCostumer;
+            }
         }
-        header("location:index.php");
-    }
-} else {
-    echo "GAGAL Menyimpan Data costumer";
-}
-
+    } 
 
 
 if (isset($_POST['tambahBarang'])) {

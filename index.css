@@ -259,6 +259,12 @@ td.hapus-btn {
     width: auto;
     border-radius: 5px;
 }
+.greeting-costumer h3 {
+    font-size: 16px;
+    color: orange;
+    font-weight: 600;
+}
+
 .container-input-wrapper  .table-keranjang.active {
     display:block;
     padding: 50px;
@@ -481,8 +487,8 @@ button.tambahBarang {
     align-content: space-between;
     justify-content: space-between;
     flex-direction: row-reverse;
-    align-items: flex-end;
     margin-bottom: 10px;
+    align-items: baseline;
 }
 .btn-tambah-barang:hover {
     background-color: grey;

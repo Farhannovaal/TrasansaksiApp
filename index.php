@@ -4,6 +4,7 @@ session_start();
  include_once("function/helper.php");
 
 
+//  print_r($_SESSION);
 if ($_SESSION['username']  == '' ) {
     header("location:login.php"); 
 }
@@ -118,8 +119,7 @@ $qtyBarang =0;
 
 ?>
 
-            <form action="keranjangUpdate.php" method="post" id="tambahPelanggan"  >
-
+            <form action="" method="post" id="formCostumer"  >
                     <div class="container-input-wrapper">
                             <div class="form-input-wrapper">
                             <div class="transaksi-input">
@@ -187,9 +187,11 @@ $qtyBarang =0;
                                         </ul>
                                     </div>
                                 </div>    
+
+                                <div class="msg">Jika berhasil</div>
                                 
                             
-                <button type="submit" name="dataCostumer" class="prosesPesanan"> Simpan Costumer </button>
+                        <button type="submit" name="dataCostumer" class="prosesPesanan1"> Simpan Costumer </button>
             
                                         <!-- SCRIPT JS COSTUMER SELECT -->
                     <script>
@@ -207,26 +209,26 @@ $qtyBarang =0;
                     </script>
                 </form>
 
-            <?php
-
-                if (isset($_SESSION['costumer'])) {
-                    foreach ($_SESSION['costumer'] as $key => $value) {
-                ?>
-                        <div class="greeting-costumer">
-                            <h3> Hallo <?php echo $value['namaCs']?> Data anda berhasil disimpan!</h3>
-                            <p> Data Anda Sudah Tersimpan </p>
-                            <p> Lanjutkan dengan data barang</p>
-                        </div>
-                <?php
-                    }
-                }
-                ?>
+       
 
 
    
     <div class="table-keranjang">
     <div class="button-resert">
     <div  class="btn-cancel-keranjang"><a href="resetKeranjang.php" onclick="return confirm('Yakin mereset seluruh keranjang?')"> Reset Keranjang   </a></div>
+
+    <?php
+
+if (isset($_SESSION['costumer'])) {
+    foreach ($_SESSION['costumer'] as $key => $value) {
+?>
+        <div class="greeting-costumer">
+            <h3> Hallo <?php echo $value['namaCs']?> Lanjutkan berbelanja</h3>
+        </div>
+<?php
+    }
+}
+?>
     <div class="btn-tambah-barang"><a href="DataCS&Barang.php"> Tambah Barang Baru </a></div>
 
     </div>
@@ -234,6 +236,7 @@ $qtyBarang =0;
         <div class="detail-pesanan-wrapper">
             
                     <h2>Detail Pesanan</h2>
+
                
                 <form action="keranjangUpdate.php" method="POST"value="submit">   
                             <label for="kodeBarang"> 
@@ -367,6 +370,7 @@ $qtyBarang =0;
     </div>
 
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="edit.js"></script>
 </body>
 </html>
