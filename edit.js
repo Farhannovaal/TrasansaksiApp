@@ -114,7 +114,7 @@ $(document).ready(function() {
         event.preventDefault();
         
         var namaCostumer = $("#namaCostumer").val();
-        var nomorTelephone = $("#nomorTelephone").val();
+        var nomorTelephone = $("#telp").val();
         var tanggal = $("#tanggal").val();
         var kode = $("#costumerSelect").val();
 

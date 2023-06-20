@@ -3,6 +3,7 @@ session_start();
 include_once("function/koneksi.php");
 include_once("function/helper.php");
 
+var_dump($_SESSION);
 if (isset($_POST['prosesPesanan'])) {
 
     if (isset($_SESSION['costumer'])) {
@@ -86,7 +87,7 @@ if (isset($_POST['prosesPesanan'])) {
         $queryTambah = mysqli_query($koneksi, "INSERT INTO m_barang (kode,nama,harga) VALUES ('$kodeBarangTransaksi',    '$namaBarang','$hargaBarang') ");
             if ($queryTambah){
                 echo "Data yang anda masukan berhasil";
-                header("Location:index.php");
+                // header("Location:index.php");
               
             } else {
                 $error = "Data yang anda masukan tidak tepat";

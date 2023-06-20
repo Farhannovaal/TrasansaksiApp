@@ -149,7 +149,7 @@ $qtyBarang =0;
                                 <div class="pemilihan-costumer">
                                 <h4 class="transaksi-input-head"> Kode </h4>
                                     <label for="Kode">
-                                        <select name="costumer" id="costumerSelect" required>
+                                        <select name="costumer" id="costumerSelect" >
                                     <!-- Looping data name pelanggan -->
                                         <?php  
                                          $customerNames = array();
@@ -217,7 +217,7 @@ $qtyBarang =0;
     <div class="button-resert">
     <div  class="btn-cancel-keranjang"><a href="resetKeranjang.php" onclick="return confirm('Yakin mereset seluruh keranjang?')"> Reset Keranjang   </a></div>
 
-    <?php
+            <?php
 
 if (isset($_SESSION['costumer'])) {
     foreach ($_SESSION['costumer'] as $key => $value) {
@@ -363,7 +363,7 @@ if (isset($_SESSION['costumer'])) {
         
         <div class="button-post">
             <form action="proses_pesanan.php" method="post">
-            <button type="submit" name="prosesPesanan" class="prosesPesanan" onclick="return confirmation();"> Kirim Pesanan </button>
+            <button type="submit" name="prosesPesanan" class="prosesPesanan" onclick="return confirm('Anda sudah yakin?, simpan data sekarang?')"> Kirim Pesanan </button>
                 </div>
             </form>
         </div>
