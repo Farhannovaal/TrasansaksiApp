@@ -1,46 +1,16 @@
-var toggleTambah = document.querySelector('.tambah-barang');
-var menuBarang = document.querySelector('.tambah-barang-container');
-
-toggleTambah.addEventListener('click', function(){
-    if(menuBarang.classList.contains('active')){
-        menuBarang.classList.remove('active');
-        console.log('Menu Barang Deactive');
-    }else{
-        menuBarang.classList.add('active');
-          console.log('Menu Barang Active');
-    }
-
-});
-
-
 
 // AUTO DATE
 
-function formatTime(date) {
-  var month = date.getMonth() + 1;
-  var day = date.getDate();
-  var year = date.getFullYear();
-  var hours = date.getHours();
-  var minutes = date.getMinutes();
-  var ampm = hours >= 12 ? 'PM' : 'AM';
-
-
-  hours = hours % 12;
-  hours = hours ? hours : 12;
-
-
-  month = month < 10 ? '0' + month : month;
-  day = day < 10 ? '0' + day : day;
-  hours = hours < 10 ? '0' + hours : hours;
-  minutes = minutes < 10 ? '0' + minutes : minutes;
-  return month + '/' + day + '/' + year + ' ' + hours + ':' + minutes + ' ' + ampm;
-}
-
 function setCurrentTime() {
   var currentTime = new Date();
-  var formattedTime = formatTime(currentTime);
+  var formattedTime = currentTime.toLocaleString('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true
+  });
   document.getElementById('tanggal').value = formattedTime;
 }
+
 window.onload = setCurrentTime;
 
 // 
@@ -125,8 +95,3 @@ function validateForm() {
     }
   }
   
-
-
-  function confirmation(){
-    return confirm("Apakah anda sudah yakin?");
-  }

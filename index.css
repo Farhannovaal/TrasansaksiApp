@@ -541,21 +541,30 @@ td.icon-hapus i {
     text-align: center;
     margin-top: 40px;
     gap: 20px;
-    /* width: 300px; */
+    width: 300px;
     /* position: absolute; */
     /* left: 50%; */
     /* top: 50%; */
+    background-color: #a9a9a945;
+    padding: 50px 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .login-wrapper h2 {
     color: white;
+    font-size: 16px;
 }
 
 
 
 .login-wrapper input {
     border: none;
-    height: 30px;
+    height: 18px;
     border: 1px solid grey;
     text-align: center;
     border-radius: 5px;
@@ -571,25 +580,42 @@ h2.login-title {
     position: relative;
     left: 50%;
     transform: translate(-50%, 10px);
+    z-index: 2;
+    background-color: #8080807d;
 }
 
 button.login-btn {
-    padding: 10px 15px;
+    padding: 5px 15px;
     border: none;
     background-color: cadetblue;
     color: white;
     border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    position: absolute;
+    font-size: 15px;
+    font-weight: 500;
+    /* position: absolute; */
     left: 50%;
     top: 70%;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     cursor: pointer;
 }
 
 input#kodeBarang {
     cursor: no-drop;
+}
+
+.blur-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    /* background-color: red; */
+    margin: 0;
+    padding: 0;
+    background-image: url(img/background.jpg);
+    filter: blur(2px);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0%;
 }
 @media screen and ( max-width: 600px ) {
 
@@ -740,7 +766,6 @@ width: 300px;
     }
 
 }
-
 
 
 

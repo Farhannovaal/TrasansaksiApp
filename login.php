@@ -41,8 +41,13 @@ if (isset($_POST['login'])) {
 <body>
     
     <h2 class="login-title"> Hallo Selamat Datang, Masukan Username & Password Anda </h2>
+<div class="blur-wrapper">  
+            
+    <p style="display:none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, non.</p>
 
-    <form action="" method="post">
+ </div>
+
+ <form action="" method="post">
             <div class="login-wrapper">
                 <div class="username">
                     <h2> Username</h2>
@@ -52,9 +57,11 @@ if (isset($_POST['login'])) {
                     <h2> Passowrd </h2>
                     <input type="password" value="" placeholder="masukan password anda" name="password">
                 </div>
+
+                
+            <button type="submit" name="login" class="login-btn"> Login </button>
             </div>
 
-            <button type="submit" name="login" class="login-btn"> Login </button>
 
     </form>
 

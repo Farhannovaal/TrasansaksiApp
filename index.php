@@ -354,11 +354,6 @@ $qtyBarang =0;
                                     <h3> Total Bayar : <?php echo Rupiah($sumBayar)?></h3>
                                 </div>
 
-                <?php
-                    if (!empty($ongkir) && !empty($diskon)) : ?>
-                    <p>Ongkir Anda adalah <?php echo $ongkir; ?></p>
-                    <p><?php echo $diskon; ?> Diskon Anda</p>
-                <?php endif; ?>
             </form>
         </div>
 
