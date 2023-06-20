@@ -259,12 +259,6 @@ td.hapus-btn {
     width: auto;
     border-radius: 5px;
 }
-.greeting-costumer h3 {
-    font-size: 16px;
-    color: orange;
-    font-weight: 600;
-}
-
 .container-input-wrapper  .table-keranjang.active {
     display:block;
     padding: 50px;
@@ -327,6 +321,15 @@ button.prosesPesanan {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+button.prosesPesanan1 {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: orange;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor:pointer;
 }.container-input-wrapper li {
     list-style: none;
 }
@@ -487,8 +490,9 @@ button.tambahBarang {
     align-content: space-between;
     justify-content: space-between;
     flex-direction: row-reverse;
-    margin-bottom: 10px;
     align-items: baseline;
+    margin-bottom: 10px;
+    gap: 20px;
 }
 .btn-tambah-barang:hover {
     background-color: grey;
@@ -622,6 +626,15 @@ input#kodeBarang {
     background-position: center;
     position: absolute;
     top: 0%;
+}
+.msg {
+    font-weight: 400;
+    color: white;
+}
+.greeting-costumer h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: orange;
 }
 @media screen and ( max-width: 600px ) {
 
@@ -772,6 +785,8 @@ width: 300px;
     }
 
 }
+
+
 
 
 
