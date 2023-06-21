@@ -125,7 +125,17 @@ $(document).ready(function() {
             tanggal: tanggal,
             kode: kode
         }, function(response) {
-            $(".msg").html("Data anda " + namaCostumer + " berhasil disimpan. Lanjutkan memilih barang.");
+            $(".msg").html("Data anda " + namaCostumer + " berhasil disimpan. Lanjutkan memilih barang.");{
+                $('#formCostumer').trigger("reset");
+                load_list();
+            }
         });
     });
 });
+
+function load_list(){
+        $.get('index.php',function(response){
+            $('#greeting-costumer').html(response);
+        });
+
+}

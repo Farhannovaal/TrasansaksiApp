@@ -222,7 +222,7 @@ $qtyBarang =0;
 if (isset($_SESSION['costumer'])) {
     foreach ($_SESSION['costumer'] as $key => $value) {
 ?>
-        <div class="greeting-costumer">
+        <div class="#greeting-costumer">
             <h3> Hallo <?php echo $value['namaCs']?> Lanjutkan berbelanja</h3>
         </div>
 <?php
