@@ -3,7 +3,10 @@ session_start();
 include_once("function/koneksi.php");
 include_once("function/helper.php");
 
-var_dump($_SESSION);
+// var_dump($_SESSION['costumer']);
+
+
+
 if (isset($_POST['prosesPesanan'])) {
 
     if (isset($_SESSION['costumer'])) {
@@ -16,6 +19,8 @@ if (isset($_POST['prosesPesanan'])) {
         }    
     }
     if (isset($_SESSION['keranjang'])) {
+
+        $found = false;
         foreach ($_SESSION['keranjang'] as $key => $value) {
             $codeBarang = $value['codebarang'];
             $harga = $value['harga'];
@@ -29,11 +34,11 @@ if (isset($_POST['prosesPesanan'])) {
             $noTransaksi =  $value['noTransaksi'];
             $diskonRupiah = $value['diskonRupiah'];
             $dataCostumer = $_SESSION['costumer']; // Ambil data costumer dari $_SESSION sebelum perulangan foreach
-    
+        $found = true;
             // Query SQL untuk menyimpan data transaksi
             $queryTransaksi = mysqli_query($koneksi, "INSERT INTO t_sales(kode,tgl,cust_id,subtotal,diskon,ongkir,total_bayar) VALUES ('$noTransaksi','$tanggalTransaksi','$costumerId','$subTotal' ,'$diskon','$ongkir','$totalPembayaran')");
             if ($queryTransaksi) {
-                echo "Data Transaksi Berhasil Disimpan";
+               "Data Transaksi Berhasil Disimpan";
             } else {
                 echo "Data Transaksi Gagal Disimpan";
             }
@@ -41,7 +46,7 @@ if (isset($_POST['prosesPesanan'])) {
             // Query SQL untuk menyimpan data detail transaksi
             $queryDetail = mysqli_query($koneksi, "INSERT INTO t_sales_det(sales_id,barang_id,harga_bandrol,qty,diskon_pct,diskon_nilai,harga_diskon,total) VALUES ('$noTransaksi','$codeBarang','$harga','$qtyCostumer','$diskon','$diskonRupiah','$subTotal','$totalKeseluruhan')");
             if ($queryDetail) {
-                echo "Data Detail Berhasil Disimpan";
+                "Data Detail Berhasil Disimpan";
             } else {
                 echo "Gagal menyimpan Data Detail";
             }
@@ -49,10 +54,14 @@ if (isset($_POST['prosesPesanan'])) {
             // Query SQL untuk menyimpan data costumer
             $queryCostumer = mysqli_query($koneksi, "INSERT INTO m_customer (kode,name_customer,telp) VALUES ('$noTransaksi','$namaCostumer','$nomorTelp')");
             if ($queryCostumer) {
-                echo "Data Costumer Berhasil Disimpan";
+                "Data Costumer Berhasil Disimpan";
             } else {
                 echo "Gagal menyimpan Data Costumer";
             }
+        }
+
+        if (!$found) {
+            echo "<script>alert('Data tidak ditemukan!'); window.location.href='index.php';</script>";
         }
     
         // Mengosongkan data costumer dan keranjang setelah penyimpanan berhasil
@@ -60,7 +69,7 @@ if (isset($_POST['prosesPesanan'])) {
         $_SESSION['keranjang'] = array();
     
         echo "<script>alert('Data anda berhasil disimpan'); window.location.href='index.php';</script>";
-        header("Location: index.php");
+        // header("Location: index.php");
         exit();
     }
     

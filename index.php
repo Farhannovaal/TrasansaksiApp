@@ -9,6 +9,9 @@ if ($_SESSION['username']  == '' ) {
     header("location:login.php"); 
 }
 
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -222,7 +225,7 @@ $qtyBarang =0;
 if (isset($_SESSION['costumer'])) {
     foreach ($_SESSION['costumer'] as $key => $value) {
 ?>
-        <div class="#greeting-costumer">
+        <div id="#greeting-costumer">
             <h3> Hallo <?php echo $value['namaCs']?> Lanjutkan berbelanja</h3>
         </div>
 <?php
@@ -257,7 +260,7 @@ if (isset($_SESSION['costumer'])) {
                             <label for="qtyBarang">
                             <input type="number" name='qtyBarang' min="1" placeholder="masukan qty barang" value="" required>
                             </label>
-                            <button type="submit" name="tambahBarang" class="tambahBarang"> Tambah </button>
+                   
                           
             </div>
 
@@ -287,6 +290,9 @@ if (isset($_SESSION['costumer'])) {
                                     </select>
                                     <p id="tampilDiskon"></p>
                             </div>
+
+                            <button type="submit" name="tambahBarang" class="tambahBarang"> Tambah </button>
+                           
                     </div>
             
             <div class="table-barang">

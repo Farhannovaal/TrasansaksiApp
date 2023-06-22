@@ -94,19 +94,6 @@ function validateForm() {
       return false;
     }
   }
-  
-
-//   AJAX FORM COSTUMER
-// $(".prosesPesanan1").click(function(){
-//     var namaCostumer = $("#namaCostumer"). val();
-//     var nomorTelephone = $("#telp").val();
-//     var kode =$("#costumerSelect").val();
-//     var tanggal = $("#tanggal").val();
-
-//     $.post("index.php", {namaCostumer:namaCostumer, nomorTelephone:nomorTelephone,kode:kode,tanggal:tanggal}, function(data){
-//         $('.msg').html(data);
-//     });
-// })
 
 $(document).ready(function() {
     // Submit form using AJAX
@@ -139,3 +126,13 @@ function load_list(){
         });
 
 }
+
+
+function deleteItem(itemId) {
+    // Send AJAX request to deleteKeranjang.php
+    fetch("hapusKeranjang.php?id=" + itemId)
+        .catch(function(error) {
+            console.log('Error:', error);
+        });
+}
+

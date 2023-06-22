@@ -4,7 +4,7 @@
     include_once("function/koneksi.php");
     include_once("function/helper.php");
 
-    var_dump($_POST);
+    // var_dump($_POST);
 
 
     if (isset($_POST['dataCostumer'])) {

@@ -47,7 +47,7 @@ include_once("function/helper.php");
                                         </label>
                                     </li>
                                 </ul>
-                                <div class="btn-tambah-barang-baru">
+                                <div class="btn-tambah-barang-baru-wrapper">
                                 <button type="submit" class="btn-kirim-barang" name="btn-kirim-barang"> Kirim </button>
                                 <a href="index.php"><div class="cancel-tambah">Cancel</div></a>
                             </div>
